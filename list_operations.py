@@ -78,8 +78,8 @@ def replace_middle(input_list):
 
 def delete_third_and_seventh(input_list):
     """Remove the third and seventh elements of the input list."""
-    input_list.pop(6)
-    input_list.pop(2)
+    del input_list[6]
+    del input_list[2]
     return input_list
 
 def delete_middle(input_list):
@@ -134,8 +134,8 @@ def custom_remove(input_list, value):
     """custom_remove(input_list, value) imitates input_list.remove(value)"""
     for i in range(custom_len(input_list)):
         if input_list[i] == value:
-            input_list[i:i+1] = []
             break
+    del input_list[i]
 
     return input_list        
 
@@ -180,5 +180,4 @@ def custom_equality(some_list, another_list):
             if some_list[i] != another_list[i]:
                 return False
         return True
-    else:
-        return False
+    return False
