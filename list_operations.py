@@ -1,4 +1,3 @@
-
 """
 Part 1: Fundamental operations on lists
 ---------------------------------------
@@ -162,7 +161,10 @@ def custom_count(input_list, value):
 
 def custom_reverse(input_list):
     """custom_reverse(input_list) imitates input_list.reverse()"""
-    input_list[:] = input_list[-1::-1]
+   #  input_list[:] = input_list[-1::-1]
+   list_len = len(input_list)
+   for i in range(list_len/2):
+      input_list[i], input_list[list_len-i-1] = input_list[list_len-i-1], input_list[i]
     return input_list
 
 def custom_contains(input_list, value):
